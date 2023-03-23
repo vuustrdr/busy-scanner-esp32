@@ -12,10 +12,12 @@ void scanAndSend() {
   BLEScan* pBLEScan = BLEDevice::getScan();
   MyAdvertisedDeviceCallbacks cb;
   pBLEScan->setAdvertisedDeviceCallbacks(&cb);
-  pBLEScan->setActiveScan(true);
-  pBLEScan->start(5);
+  pBLEScan->setActiveScan(true);  
+  pBLEScan->start(120); //configure to bring down sensitivity
 
   int deviceCount = cb.deviceAddresses.size();
+  Serial.println("")
+
   HTTPClient http;
   http.begin(endpoint);
   http.addHeader("Content-Type", "application/json");

@@ -13,7 +13,7 @@ void setup() {
   Serial.println("Initializing...");
 
   BLEDevice::init("");
-  // BLEDevice::setPower(ESP_PWR_LVL_P9);
+  
   WiFi.begin(ssid, pass);
 
   while (WiFi.status() != WL_CONNECTED) {
