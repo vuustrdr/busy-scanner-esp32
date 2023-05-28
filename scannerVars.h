@@ -1,7 +1,13 @@
-//version is here
-int version = 0;
-//Once i have a server to host files on i can replace it with this.
-String endpoint = "http://100.97.59.7:3001/requests/test_8";
-String versionEndpoint = "http://100.97.59.7:3001/files/venues/test_8/version";
-String firmwareEndpoint = "http://100.97.59.7:3001/files/venues/test_8";
-String logEndpoint = "http://100.97.59.7:3001/files/venues/test_8/logs";
+// Version is here
+int version = 1;
+// Key
+String authKey = "testauthkey119";
+// Once i have a server to host files on i can replace it with this.
+String ip = "100.97.59.135";
+// Id for store
+String alias = "test_10";
+// Endpoints (Set up to local because why not)
+String endpoint = "http://" + ip + ":3001/requests/" + alias;
+String versionEndpoint = "http://" + ip + ":3001/files/venues/" + alias + "/version";
+String firmwareEndpoint = "http://" + ip + ":3001/files/venues/" + alias;
+String logEndpoint = "http://" + ip + ":3001/files/venues/" + alias + "/logs";
